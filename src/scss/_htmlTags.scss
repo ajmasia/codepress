@@ -1,7 +1,16 @@
 body {
-    padding-top: 54px;
-    
-    @media (min-width:992px) {
-        padding-top: 56px;
+    padding-top: 75px;
+  }
+  
+  @media (min-width: 992px) {
+    body {
+      padding-top: 100px;
     }
   }
+
+.mb-4 {
+    margin-bottom: 3.5rem !important;
+}
+.card-title {
+  margin: 0;
+}
