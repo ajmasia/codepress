@@ -25,15 +25,14 @@ if (isProduction) {
     scssLoaders = ['style-loader', 'css-loader?url=false&sourceMap=true', 'sass-loader?sourceMap=true'];
 }
 
-
 // Webpack congig
 module.exports = {
     // Entry point: File to build the dependency graph
-    entry: ["babel-polyfill", path.join(__dirname, 'src', 'entry.js')],
+    entry: ['babel-polyfill', path.join(__dirname, 'src', 'entry.js')],
     // Output: Generated code folder
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist')
     },
     module: {
         rules: [
@@ -75,7 +74,7 @@ module.exports = {
                 collapseWhitespace: true
             }
         }),
-        new ExtractTextPlugin('style.css')
+        new ExtractTextPlugin('style.css'),
     ],
     // Dev server config
     devServer: {

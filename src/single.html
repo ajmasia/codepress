@@ -9,18 +9,18 @@
             <div class="col-md-12">
 
                 <div class="card">
-                    
+
                     <div class="card-body">
                         <h1 class="card-title">Post Title</h1>
                     </div>
-                    
+
                     <img class="card-img-top" src="http://www.oneminutecloser.com/wp-content/uploads/2015/11/healthfood-900x300.jpg" alt="Card image cap">
-                    
+
                     <div class="card-footer text-muted">
                         Posted on January 1, 2017 by
                         <a href="#">Start Bootstrap</a>
                     </div>
-                    
+
                     <div class="card-body">
                         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam
                             sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum
@@ -28,7 +28,8 @@
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos
                             iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus,
-                            voluptatibus.</p>
+                            voluptatibus.
+                        </p>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis
                             unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis.
@@ -44,12 +45,15 @@
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas
                             placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem
-                            obcaecati?</p>
+                            obcaecati?
+                        </p>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo,
                             aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam
                             recusandae? Qui, necessitatibus, est!</p>
-                            <a href="./single.html" class="btn btn-outline-secondary"><i class="fa fa-thumbs-up"></i></a>
+                        <a href="./single.html" class="btn btn-outline-secondary">
+                            <i class="fa fa-thumbs-up"></i>
+                        </a>
                     </div>
 
                 </div>
@@ -58,44 +62,30 @@
                 <div class="card mt-5">
 
                     <h5 class="card-header">Leave a Comment:</h5>
-                    
+
                     <div class="card-body">
                         <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <input type="email" class="form-control" id="comment-name" placeholder="Name">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <input type="password" class="form-control" id="comment-surname" placeholder="Surname">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" id="comment-email" placeholder="email">
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <textarea class="form-control" rows="3"></textarea>
                             </div>
                             <button type="submit" class="btn btn-warning">Send</button>
                         </form>
                     </div>
-                
+
                 </div>
 
-                <!-- Single Comment -->
-                <div class="media mt-5 mb-4">
-                
-                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                
-                    <div class="media-body">
-                        <h5 class="mt-0">Commenter Name</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                        vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
-                        congue felis in faucibus.
-                    </div>
-                
-                </div>
-                
-                <div class="media mt-5 mb-4">
-                
-                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                
-                    <div class="media-body">
-                        <h5 class="mt-0">Commenter Name</h5>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in
-                        vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
-                        congue felis in faucibus.
-                    </div>
-                
-                </div>
+                <div id="comments" class="mt-4"></div>
 
             </div>
 

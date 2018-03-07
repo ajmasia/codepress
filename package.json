@@ -1,5 +1,5 @@
 {
-  "name": "webpack-bootstrap-template",
+  "name": "codepress",
   "version": "1.0.0",
   "description": "Webpack Bootstrap development environment template",
   "main": "index.js",
@@ -7,7 +7,8 @@
     "webpack": "MODE=dev webpack",
     "webpack-dev": " MODE=dev webpack --watch",
     "webpack-dev-server": "MODE=dev webpack-dev-server",
-    "webpack-build": "MODE=production webpack -p"
+    "webpack-build": "MODE=production webpack -p",
+    "json-server": "json-server --watch db.json --port 3001"
   },
   "keywords": [
     "webpack",
@@ -41,6 +42,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "jquery": "^3.3.1",
+    "moment": "^2.21.0",
     "popper.js": "^1.12.9",
     "reset-css": "^2.2.1"
   }

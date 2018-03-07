@@ -1,0 +1,20 @@
+{
+  "comments": [
+      {
+          "_id": 1,
+          "postId": "1",
+          "name": "Daenerys",
+          "surname": "Targaryen",
+          "email": "daenerys@gameofthrones.com",
+          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nisl sodales, vulputate felis non, vehicula augue. Quisque ornare id nisl sed ullamcorper. Aenean sed commodo lacus."
+      },
+      {
+          "_id": 2,
+          "postId": "1",
+          "name": "Jon",
+          "surname": "Snow",
+          "email": "jonsnow@gameofthrones.com",
+          "comment": "Maecenas eu enim aliquam, pellentesque est sit amet, aliquet ipsum. Proin eget dolor id odio maximus dignissim ac vitae augue."
+      }
+  ]
+}
