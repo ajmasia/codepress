@@ -6,8 +6,13 @@ import { CommentsService } from './commentsService';
 
 export class CommentsController {
 
-    constructor(selector) {
+    constructor(selector, service, pubsub) {
         this.element = document.querySelector(selector);
+        this.commentsService = service;
+        pubsub.subscribe('comment:created', comment => {
+            console.log('CommentsController', comment);
+            this.loadComments();
+        })
     }
 
     showLoadingMessage() {
@@ -23,11 +28,11 @@ export class CommentsController {
     }
 
     loadComments() {
-        let commentsService = new CommentsService();
 
+        
         this.showLoadingMessage();
 
-        commentsService.list().then(comments => {
+        this.commentsService.list().then(comments => {
             let html = '';
             if (comments.length == 0) {
                 this.showNoComments();

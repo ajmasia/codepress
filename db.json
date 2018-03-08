@@ -1,20 +1,25 @@
 {
   "comments": [
-      {
-          "_id": 1,
-          "postId": "1",
-          "name": "Daenerys",
-          "surname": "Targaryen",
-          "email": "daenerys@gameofthrones.com",
-          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec nisl sodales, vulputate felis non, vehicula augue. Quisque ornare id nisl sed ullamcorper. Aenean sed commodo lacus."
-      },
-      {
-          "_id": 2,
-          "postId": "1",
-          "name": "Jon",
-          "surname": "Snow",
-          "email": "jonsnow@gameofthrones.com",
-          "comment": "Maecenas eu enim aliquam, pellentesque est sit amet, aliquet ipsum. Proin eget dolor id odio maximus dignissim ac vitae augue."
-      }
+    {
+      "name": "Daenerys",
+      "surname": "Targaryen",
+      "email": "daenerys@gameofthrones.org",
+      "comment": "Is a fictional character in George R. R. Martin's A Song of Ice and Fire series of novels, as well as the television adaptation, Game of Thrones, where she is portrayed by Emilia Clarke. In the novels, she is a prominent point of view character. She is one of the most popular characters in the series, and The New York Times cites her as one of the author's finest creations.",
+      "id": 1
+    },
+    {
+      "name": "Jon",
+      "surname": "Snow",
+      "email": "jonsnow@gameofthrones.org",
+      "comment": "Is a fictional character in the A Song of Ice and Fire series of fantasy novels by American author George R. R. Martin, and its television adaptation Game of Thrones.",
+      "id": 2
+    },
+    {
+      "name": "Tyrion",
+      "surname": "Lannister",
+      "email": "tyrion@gameofthrones.org",
+      "comment": "Tyrion is a dwarf and member of House Lannister of Casterly Rock, one of the wealthiest and most powerful families in the fictional kingdom of Westeros. In the story, Tyrion uses his status as a Lannister to mitigate the prejudice he has received all of his life, even from his family.",
+      "id": 3
+    }
   ]
 }
