@@ -2,7 +2,9 @@
  * Comments controller
  */
 
-import { CommentsService } from './commentsService';
+import {
+    CommentsService
+} from './commentsService';
 
 export class CommentsController {
 
@@ -29,16 +31,16 @@ export class CommentsController {
 
     loadComments() {
 
-        
-        this.showLoadingMessage();
+        if (this.element != null) {
+            this.showLoadingMessage();
 
-        this.commentsService.list().then(comments => {
-            let html = '';
-            if (comments.length == 0) {
-                this.showNoComments();
-            } else {
-                for (let comment of comments) {
-                    html += `
+            this.commentsService.list().then(comments => {
+                let html = '';
+                if (comments.length == 0) {
+                    this.showNoComments();
+                } else {
+                    for (let comment of comments) {
+                        html += `
                     <div class="media mt-5 mb-4">
                         <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
                         <div class="media-body">
@@ -46,12 +48,13 @@ export class CommentsController {
                             ${comment.comment}
                         </div>
                     </div>`;
+                    }
+                    this.element.innerHTML = html;
                 }
-                this.element.innerHTML = html;
-            }
-        }).catch(error => {
-            this.showErrorMesage();
-        });
+            }).catch(error => {
+                this.showErrorMesage();
+            });
+        }
     }
 
 }

@@ -15,11 +15,11 @@
       "id": 2
     },
     {
-      "name": "Tyrion",
-      "surname": "Lannister",
-      "email": "tyrion@gameofthrones.org",
-      "comment": "Tyrion is a dwarf and member of House Lannister of Casterly Rock, one of the wealthiest and most powerful families in the fictional kingdom of Westeros. In the story, Tyrion uses his status as a Lannister to mitigate the prejudice he has received all of his life, even from his family.",
-      "id": 3
+      "name": "Sansa",
+      "surname": "Stark",
+      "email": "sansa@gamesofthrones.org",
+      "comment": "Raised as a lady, Sansa is traditionally feminine. Sansa's interests are music, poetry, and singing. She strives to become like the heroines of romantic tales by attempting to find a prince, knight, or gentleman to fall in love with. For a companion animal, she owned a direwolf named Lady. However, Lady was killed in place of Arya's direwolf, Nymeria, in the first installment.",
+      "id": 4
     }
   ]
 }

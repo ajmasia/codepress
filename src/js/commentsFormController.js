@@ -2,7 +2,7 @@ export class CommentsFormController {
 
     constructor(selector, service, pubsub) {
         this.element = document.querySelector(selector);
-        this.addEventListeners();
+        if (this.element != null) this.addEventListeners();
         this.pubsub = pubsub;
         this.loading = false;
         this.commentService = service;

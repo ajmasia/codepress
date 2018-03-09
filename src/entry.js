@@ -3,6 +3,7 @@ import css from './scss/styles.scss';
 import { CommentsController } from './js/commentsController';
 import { CommentsFormController } from './js/commentsFormController';
 import { CommentsService } from './js/commentsService';
+import { PostMetaController } from './js/postMetaController'
 import { PubSub } from 'pubsub-js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,5 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     commenstController.loadComments();
 
     let commentsFormController = new CommentsFormController('#comments-form', commentsService, PubSub);
+
+    let postMetaController = new PostMetaController('.meta', commentsService);
 
 });
