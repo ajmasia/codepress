@@ -2,9 +2,6 @@
  * Comments controller
  */
 
-import {
-    CommentsService
-} from './commentsService';
 
 export class CommentsController {
 
@@ -14,7 +11,7 @@ export class CommentsController {
         pubsub.subscribe('comment:created', comment => {
             console.log('CommentsController', comment);
             this.loadComments();
-        })
+        });
     }
 
     showLoadingMessage() {

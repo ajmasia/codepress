@@ -9,11 +9,12 @@ import { PubSub } from 'pubsub-js';
 document.addEventListener('DOMContentLoaded', () => {
 
     let commentsService = new CommentsService('http://localhost:3001/comments/');
+
     let commenstController = new CommentsController('#comments', commentsService, PubSub);
     commenstController.loadComments();
 
     let commentsFormController = new CommentsFormController('#comments-form', commentsService, PubSub);
 
-    let postMetaController = new PostMetaController('.meta', commentsService);
+    let postMetaController = new PostMetaController('.meta', commentsService, PubSub);
 
 });

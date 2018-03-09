@@ -4,10 +4,14 @@
 
 export class PostMetaController {
 
-    constructor(selector, service) {
+    constructor(selector, service, pubsub) {
         this.element = document.querySelectorAll(selector);
         this.commentsService = service;
         if (this.element != null) this.showCommentsCounter();
+        pubsub.subscribe('comment:created', comment => {
+            console.log('CommentsController', comment);
+            this.showCommentsCounter();
+        })
     }
 
     showCommentsCounter() {
