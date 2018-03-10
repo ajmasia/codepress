@@ -2,6 +2,7 @@
  * Comments controller
  */
 
+import gravatar from 'gravatar';
 
 export class CommentsController {
 
@@ -33,13 +34,15 @@ export class CommentsController {
 
             this.commentsService.list().then(comments => {
                 let html = '';
+                
                 if (comments.length == 0) {
                     this.showNoComments();
                 } else {
                     for (let comment of comments) {
+                        var gravatarUrl = gravatar.url(comment.email, {s: '75', r: 'pg'});
                         html += `
                     <div class="media mt-5 mb-4">
-                        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                        <img class="d-flex mr-3 rounded-circle" src="${gravatarUrl}" alt="">
                         <div class="media-body">
                             <h5 class="mt-0">${comment.name} ${comment.surname}</h5>
                             ${comment.comment}
@@ -55,3 +58,5 @@ export class CommentsController {
     }
 
 }
+
+

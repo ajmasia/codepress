@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // App controllers
     let commenstController = new CommentsController('#comments', commentsService, PubSub);
     commenstController.loadComments();
-
     let commentsFormController = new CommentsFormController('#comments-form', commentsService, PubSub);
-    let postMetaController = new PostMetaController('.meta', commentsService, postsService, PubSub);
+    let postMetaController = new PostMetaController('.meta', 'img', commentsService, postsService, PubSub);
 
 });
