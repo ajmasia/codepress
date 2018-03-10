@@ -10,6 +10,7 @@ export class CommentsService {
 
     async list() {
         const response = await fetch(this.url);
+        // reponse.json() return a promise
         return response.json();
     }
 

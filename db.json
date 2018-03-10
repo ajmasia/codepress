@@ -22,25 +22,11 @@
       "id": 4
     },
     {
-      "name": "Juan Antonio",
-      "surname": "Pérez de la Hera",
-      "email": "juan@hotmail.com",
-      "comment": "Hola, estoy de acuerdo con el post.",
+      "name": "Antonio José",
+      "surname": "Masiá",
+      "email": "antoniomasiaguerrero@gmail.com",
+      "comment": "jlkjdlkjaldkjalskd",
       "id": 5
-    },
-    {
-      "name": "Sonia",
-      "surname": "Carrasco",
-      "email": "sonia@gmail.com",
-      "comment": "kjhlksdhlksadlsajlkdad",
-      "id": 6
-    },
-    {
-      "name": "Alicia",
-      "surname": "Camacho",
-      "email": "alicia@me.com",
-      "comment": "lkjsadlkjaslkdjlksa",
-      "id": 7
     }
   ]
 }

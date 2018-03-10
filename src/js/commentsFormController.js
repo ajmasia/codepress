@@ -1,8 +1,11 @@
 export class CommentsFormController {
 
     constructor(selector, service, pubsub) {
+        // Select form
         this.element = document.querySelector(selector);
         if (this.element != null) this.addEventListeners();
+        
+        // Config and event
         this.pubsub = pubsub;
         this.loading = false;
         this.commentService = service;
@@ -52,18 +55,30 @@ export class CommentsFormController {
         }
     }
 
-    // Add event to all inputs
+    // Add event to all inputs and textarea
     addImputListeners() {
         this.element.querySelectorAll('input, textarea').forEach(input => {
-            input.addEventListener('blur', event => {
-                // event.target sería lo mismo que input en este caso
-                if (input.checkValidity() == false) {
-                    input.classList.add('is-invalid');
-                } else {
-                    input.classList.remove('is-invalid');
-                }
-                this.checkFormValidity();
-            });
+            if (input.tagName == 'INPUT') {
+                input.addEventListener('blur', event => {
+                
+                    if (input.checkValidity() == false) {
+                        input.classList.add('is-invalid');
+                    } else {
+                        input.classList.remove('is-invalid');
+                    }
+                    this.checkFormValidity();
+                });
+            } else {
+                input.addEventListener('keyup', event => {
+                
+                    if (input.checkValidity() == false) {
+                        input.classList.add('is-invalid');
+                    } else {
+                        input.classList.remove('is-invalid');
+                    }
+                    this.checkFormValidity();
+                });
+            }
         });
     }
 

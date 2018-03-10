@@ -2,33 +2,47 @@
  * Comments counter controller
  */
 
+ // Import js app library
+import appLib from './appLib';
+
 export class PostMetaController {
 
-    constructor(selector, service, pubsub) {
+    constructor(selector, commentsService, postsService, pubsub) {
+        
+        // Select all elements with metadata
         this.element = document.querySelectorAll(selector);
-        this.commentsService = service;
-        if (this.element != null) this.showCommentsCounter();
+        
+        // Instance services
+        this.commentsService = commentsService;
+        this.postsService = postsService;
+        
+        // Run showMeta method 
+        if (this.element != null) this.showMeta();
+       
+        // Subscribe to create new comment event
         pubsub.subscribe('comment:created', comment => {
             console.log('CommentsController', comment);
-            this.showCommentsCounter();
+            this.showMeta();
         })
     }
 
-    showCommentsCounter() {
+    showMeta() {
         this.commentsService.list().then(comments => {
-            this.element.forEach(element => {
-                element.innerHTML = 
-                `Posted on January 1, 2017 by
-                    <a href="#">Start Bootstrap</a>
-                    <i class="far fa-comments ml-1"></i>
-                    <a class="text-secondary comments-counter" href="#"> ${comments.length}</span></a>`;
-            });
+            // Go through each element and inject metadata
+            for (let i = 0; i < this.element.length; i++) {
+                let postedOn = appLib.postedOn(this.postsService.postPublishDates[i].publishDate);
+                this.element[i].innerHTML =
+                    `${postedOn} by
+                        <a href="#">CodePress</a>
+                        <i class="far fa-comments ml-1"></i>
+                        <a class="text-secondary comments-counter" href="#"> ${comments.length}</span></a>`;
+                }
         }).catch(error => {
             this.showErrorMesage();
         });
+        
     }
     showErrorMesage() {
-        this.element.innerHTML = '<div class="alert alert-danger" role="alert">Error retrieving comments</div>';
+        this.element.innerHTML = '<div class="alert alert-danger" role="alert">Error retrieving data</div>';
     }
-
 }
