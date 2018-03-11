@@ -1,9 +1,21 @@
 body {
-    padding-top: 75px;
+  padding-top: 75px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 100px;
   }
-  
-  @media (min-width: 992px) {
-    body {
-      padding-top: 100px;
-    }
+}
+
+footer a {
+  color: $meta-link-color;
+  font-weight: bold;
+  border-bottom: 2px solid $meta-link-border-color;
+  padding-bottom: 2px;
+  &:hover {
+    color: $meta-link-hover-color;
+    text-decoration: none;
+    transition: all 0.25s;
   }
+}

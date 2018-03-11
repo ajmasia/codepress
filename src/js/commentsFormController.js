@@ -15,19 +15,13 @@ export class CommentsFormController {
         this.commentService = service;
 
     }
-
-    // inputs, textarea and butthon dissable while loading
-    setLoading(loading) {
-        this.loading = loading;
-        this.element.querySelectorAll('input, textarea, button').forEach(item => { item.disabled = loading });
-    }
-
+    
     // Add blur event to all form imputs
     addEventListeners() {
         this.addImputListeners();
         this.addFormSubmitListener();
     }
-
+    
     // Add submit event to form button
     addFormSubmitListener() {
         this.element.addEventListener('submit', event => {
@@ -50,7 +44,7 @@ export class CommentsFormController {
             });
         });
     }
-
+    
     // Build a comment data
     buildCommentData() {
         return {
@@ -60,13 +54,13 @@ export class CommentsFormController {
             comment: this.element.querySelector('#comment-text').value
         }
     }
-
+    
     // Add event to all inputs and textarea
     addImputListeners() {
         this.element.querySelectorAll('input, textarea').forEach(input => {
             if (input.tagName == 'INPUT') {
                 input.addEventListener('blur', event => {
-                
+                    
                     if (input.checkValidity() == false) {
                         input.classList.add('is-invalid');
                     } else {
@@ -76,7 +70,7 @@ export class CommentsFormController {
                 });
             } else {
                 input.addEventListener('keyup', event => {
-                
+                    
                     if (input.checkValidity() == false) {
                         input.classList.add('is-invalid');
                     } else {
@@ -87,17 +81,22 @@ export class CommentsFormController {
             }
         });
     }
-
+    
     // Check if all inputs ara validated then active send button
     checkFormValidity() {
-
+        
         let button = this.element.querySelector('button');
-
+        
         if (this.element.checkValidity()) {
             button.disabled = false;
         } else {
             button.disabled = true;
         }
     }
-
+    
+    // inputs, textarea and butthon dissable while loading
+    setLoading(loading) {
+        this.loading = loading;
+        this.element.querySelectorAll('input, textarea, button').forEach(item => { item.disabled = loading });
+    }
 }

@@ -40,7 +40,7 @@ export class PostMetaController {
                     `${postedOn} by
                         <a href="#">CodePress</a>, <a href="#">${this.postsService.postPublishDates[i].category}</a>
                         <i class="far fa-comments ml-1"></i>
-                        <a class="text-secondary comments-counter" href="#"> ${comments.length}</span></a>`;
+                        <a class="text-secondary comments-counter" href="./single.html#comments"> ${comments.length}</span></a>`;
                 }
         }).catch(error => {
             this.showErrorMesage();

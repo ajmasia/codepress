@@ -47,6 +47,7 @@
     "moment": "^2.21.0",
     "popper.js": "^1.12.9",
     "pubsub-js": "^1.6.0",
-    "reset-css": "^2.2.1"
+    "reset-css": "^2.2.1",
+    "smooth-scroll": "^12.1.5"
   }
 }

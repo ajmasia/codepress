@@ -4,3 +4,27 @@
 .card-title {
   margin: 0;
 }
+
+.meta a {
+  color: $meta-link-color;
+  font-weight: bold;
+  border-bottom: 2px solid $meta-link-border-color;
+  padding-bottom: 2px;
+  &:hover {
+    color: $meta-link-hover-color;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+}
+
+.page-link {
+  border-color: $buttons-border-color;
+  color: $meta-link-color;
+}
+
+.page-item.active .page-link {
+  background: $buttons-color-yelow;
+  color: black;
+  border-color: $buttons-border-color;
+}
+

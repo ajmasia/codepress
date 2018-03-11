@@ -34,6 +34,13 @@
       "email": "antoniomasiaguerrero@gmail.com",
       "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae turpis eget magna tincidunt suscipit nec ut leo. Phasellus tincidunt sapien sit amet dapibus dignissim. Curabitur condimentum sagittis iaculis. Aenean accumsan molestie ex, ut ultricies nunc eleifend pharetra.",
       "id": 6
+    },
+    {
+      "name": "Sonia",
+      "surname": "Carrasco",
+      "email": "soniacarrascosanchez@gmail.com",
+      "comment": "Me gusta esta web",
+      "id": 7
     }
   ]
 }
