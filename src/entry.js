@@ -12,9 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // App services
     let commentsService = new CommentsService(config.serviceURL + config.servicePORT + '/' + config.commentsCollection);
-    //console.log(postsService);
 
-    // App controllers
+    // Instance app controllers
     let commenstController = new CommentsController('#comments', commentsService, PubSub);
     commenstController.loadComments();
     let commentsFormController = new CommentsFormController('#comments-form', commentsService, PubSub);

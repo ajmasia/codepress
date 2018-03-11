@@ -1,12 +1,14 @@
 /**
  * Comments counter controller
+ * In a new release, this controller will be an postController
  */
 
  // Import js app library
 import appLib from './appLib';
 
 export class PostMetaController {
-
+    
+    // Constructor method
     constructor(metaSelector, imgSelector, commentsService, postsService, pubsub) {
         
         // Select all elements with metadata
@@ -28,6 +30,7 @@ export class PostMetaController {
         })
     }
 
+    // This method show metada in all post
     showMeta() {
         this.commentsService.list().then(comments => {
             // Go through each metaElement and inject metadata
@@ -44,15 +47,18 @@ export class PostMetaController {
         });
         
     }
+    // This method show and message when an error occurs  
     showErrorMesage() {
         this.metaElement.innerHTML = '<div class="alert alert-danger" role="alert">Error retrieving data</div>';
     }
 
+    // This method detect if image src exist and replace it with the default placeholder
     insertPlaceholder() {
         this.imgElement.forEach(img => {
             if (img.getAttribute('src') == '') {
                 img.src = 'http://placehold.it/750x300';
             }
+            
         })
     }
 }

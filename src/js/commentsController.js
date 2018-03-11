@@ -6,27 +6,35 @@ import gravatar from 'gravatar';
 
 export class CommentsController {
 
+    // Constructor method
     constructor(selector, service, pubsub) {
+        
         this.element = document.querySelector(selector);
         this.commentsService = service;
+
+        // Subscribe to new comment create event
         pubsub.subscribe('comment:created', comment => {
             console.log('CommentsController', comment);
             this.loadComments();
         });
     }
 
+    // Method that show a message while the page loads
     showLoadingMessage() {
         this.element.innerHTML = '<div class="alert alert-info" role="alert">Loading data ...</div>';
     }
 
+    // Method that return a message when an error occurs
     showErrorMesage() {
         this.element.innerHTML = '<div class="alert alert-danger" role="alert">Error retrieving comments</div>';
     }
 
+    // Method that return amessage when there isn´t comments to show
     showNoComments() {
         this.element.innerHTML = '<div class="alert alert-warning" role="alert">Post whitout comments</div>';
     }
 
+    // Method that return and inject all available comments
     loadComments() {
 
         if (this.element != null) {

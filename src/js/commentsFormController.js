@@ -1,5 +1,9 @@
+/**
+ * Comments form controller
+ */
 export class CommentsFormController {
 
+    // Constructor method
     constructor(selector, service, pubsub) {
         // Select form
         this.element = document.querySelector(selector);
@@ -24,6 +28,7 @@ export class CommentsFormController {
         this.addFormSubmitListener();
     }
 
+    // Add submit event to form button
     addFormSubmitListener() {
         this.element.addEventListener('submit', event => {
             event.preventDefault();
@@ -46,6 +51,7 @@ export class CommentsFormController {
         });
     }
 
+    // Build a comment data
     buildCommentData() {
         return {
             name: this.element.querySelector('#comment-name').value,
