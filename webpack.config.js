@@ -25,7 +25,7 @@ if (isProduction) {
     scssLoaders = ['style-loader', 'css-loader?url=false&sourceMap=true', 'sass-loader?sourceMap=true'];
 }
 
-// Webpack congig
+// Webpack config
 module.exports = {
     // Entry point: File to build the dependency graph
     entry: ['babel-polyfill', path.join(__dirname, 'src', 'entry.js')],
